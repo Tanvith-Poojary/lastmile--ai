@@ -1,0 +1,4008 @@
+/goal
+
+You are an elite multidisciplinary product development team consisting of:
+- A senior full-stack software architect
+- A principal React and Next.js engineer
+- A UI/UX designer specializing in premium SaaS applications
+- An AI/ML engineer specializing in optimization and decision-support systems
+- A transportation logistics optimization specialist
+- A QA engineer and hackathon mentor
+
+Your mission is to independently design, implement, test, debug, and prepare a complete working web application called LASTMILE AI.
+
+Do not merely generate a design or static prototype. Build a genuinely interactive, polished, functional application.
+
+==================================================
+1. PROJECT BACKGROUND
+==================================================
+
+PROJECT NAME: LASTMILE AI
+
+TAGLINE: Every student deserves a way to reach their classroom.
+
+PROJECT CATEGORY:
+AI-powered rural transportation coordination and optimization platform.
+
+PROBLEM:
+
+Many rural students in India depend on a limited number of government buses to travel to schools and colleges.
+
+Transportation becomes unreliable when:
+- Buses are unavailable.
+- Vehicles break down.
+- Roads become inaccessible.
+- Certain routes are disrupted.
+- A bus has more students than available seats.
+- Multiple villages need transport simultaneously.
+- Some routes have excess capacity while others have unmet demand.
+- Students do not know what alternative authorized transport is available.
+
+Existing transportation resources are limited and poorly coordinated.
+
+OUR SOLUTION:
+
+LASTMILE AI is an intelligent transportation decision-support platform that uses AI-assisted reasoning, demand estimation, vehicle allocation, route optimization, and transparent recommendations to improve the utilization of existing rural transport resources.
+
+The application should allow a transportation administrator to:
+1. Understand transportation demand across villages.
+2. Monitor the available approved vehicles.
+3. Identify routes where demand exceeds capacity.
+4. Forecast upcoming transportation requirements.
+5. Optimize vehicle and seat allocation.
+6. Simulate breakdowns and road closures.
+7. Recommend alternative authorized transportation.
+8. Understand why the AI recommends a particular allocation.
+9. Generate an actionable transportation plan.
+
+The platform should be compelling enough to demonstrate during a competitive AI hackathon.
+
+IMPORTANT:
+All initial transportation data must be explicitly labelled as illustrative demonstration data. Do not represent fictional buses, routes, locations, or traffic conditions as live information.
+
+==================================================
+2. PRIMARY PRODUCT OBJECTIVE
+==================================================
+
+Build a premium, modern, responsive web application that feels like a real transportation intelligence command center.
+
+The platform must prioritize:
+
+- Functional features over decorative elements.
+- Intelligent decision-making over simple dashboards.
+- Working interactions over static components.
+- Explainability over unexplained AI outputs.
+- Accessibility and responsible transportation planning.
+- Impressive visual presentation.
+- A fast and reliable hackathon demonstration.
+
+The application should be usable without paid API subscriptions or mandatory external credentials.
+
+Use a deterministic local optimization engine as the guaranteed foundation. Integrate a real language-model API as an optional enhancement, with an honest and clearly labelled fallback when no API key is available.
+
+==================================================
+3. TECHNOLOGY STACK
+==================================================
+
+Use the following stack:
+
+Frontend:
+- Next.js with App Router.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui or equivalent accessible components.
+- Lucide React icons.
+- Recharts for charts.
+- Custom SVG route visualization.
+
+Backend:
+- Next.js API routes.
+- Server-side Gemini API integration using the current official Google Gen AI JavaScript SDK.
+- Zod for input and output validation.
+
+State:
+- React state and context where appropriate.
+- LocalStorage for persistence of demonstration data, settings, and scenarios.
+
+Testing:
+- Vitest for optimizer unit tests.
+- TypeScript validation.
+- Production build verification.
+
+Deployment:
+- Vercel-compatible configuration.
+- Public GitHub repository preparation.
+
+Avoid unnecessary architecture complexity.
+
+Do not introduce a database, authentication provider, paid maps API, or third-party subscription dependency merely for appearance.
+
+==================================================
+4. VISUAL DESIGN AND BRAND IDENTITY
+==================================================
+
+Create a visually stunning and professional interface.
+
+DESIGN DIRECTION:
+
+Think of a combination of:
+- Premium enterprise SaaS dashboard.
+- Modern mobility intelligence platform.
+- Transportation operations center.
+- AI-powered logistics management application.
+
+The application must not look like a generic student project.
+
+COLOR SYSTEM:
+
+Use a dark premium interface with:
+- Deep navy background: #0B1220
+- Secondary panel: #111C2E
+- Elevated surface: #17243A
+- Primary emerald: #10B981
+- Accent cyan: #38BDF8
+- Warning amber: #F59E0B
+- Critical red: #F87171
+- Main text: #F8FAFC
+- Muted text: #94A3B8
+
+Use color purposefully.
+
+TYPOGRAPHY:
+- Use Inter or Geist.
+- Strong visual hierarchy.
+- Clear section headings.
+- Consistent typography.
+- Readable numeric metrics.
+
+INTERFACE DETAILS:
+- Collapsible sidebar.
+- Refined top navigation.
+- Rounded cards with subtle borders.
+- Soft shadows.
+- Carefully designed empty states.
+- Smooth transitions.
+- Responsive chart containers.
+- Interactive map elements.
+- Beautiful modal dialogs.
+- Toast notifications.
+- Loading skeletons.
+- Animated KPI transitions where appropriate.
+
+Avoid:
+- Excessive gradients.
+- Overuse of glassmorphism.
+- Oversized headings.
+- Random decorative elements.
+- Excessive animations.
+- Cluttered cards.
+- Nonfunctional buttons.
+
+The interface must be exceptionally polished on desktop and responsive on mobile.
+
+==================================================
+5. APPLICATION NAVIGATION
+==================================================
+
+Build a sidebar with the following sections:
+
+1. Overview
+2. Live Operations
+3. Route Optimizer
+4. Demand Forecast
+5. AI Intelligence Lab
+6. Transport Resources
+7. Scenario Simulator
+8. About Project
+
+The sidebar should use icons and indicate the currently active section.
+
+The top bar should include:
+- LASTMILE AI logo.
+- Current demonstration mode indicator.
+- Notifications.
+- Reset Demo button.
+- User avatar labelled Demo Administrator.
+
+Do not implement fake authentication. Clearly identify this as a demonstration administrator interface.
+
+==================================================
+6. OVERVIEW DASHBOARD
+==================================================
+
+Create a sophisticated transportation intelligence dashboard.
+
+TOP KPI CARDS:
+
+Display:
+
+1. Total Students Requiring Transport
+2. Available Transport Seats
+3. Operational Vehicles
+4. Students Requiring Alternative Transport
+5. Transportation Coverage Percentage
+
+All KPI values must be calculated from the underlying demonstration dataset.
+
+Do not hardcode changing KPI values into individual UI cards.
+
+MAIN DASHBOARD SECTIONS:
+
+A. Transportation Network Map
+
+Build a visually attractive schematic SVG map.
+
+Display:
+- Villages.
+- Educational institution hubs.
+- Bus routes.
+- Vehicle markers.
+- Route connections.
+- Disrupted routes.
+- Demand intensity.
+
+Use fictional village names in the demonstration dataset.
+
+The map must be interactive:
+- Click a village to reveal its student demand.
+- Click a route to reveal its vehicle allocation.
+- Show route status.
+- Show capacity information.
+- Highlight disrupted connections.
+
+Label the visualization:
+Illustrative transportation network — not a live GPS map.
+
+B. Demand versus Capacity Chart
+
+Create a clear bar chart showing:
+- Demand for each village.
+- Available seats allocated.
+- Unmet student demand.
+
+C. Transportation Alerts
+
+Examples:
+- Route RL-02 has capacity constraints.
+- Vehicle BUS-03 is unavailable.
+- Kallur has 12 students awaiting allocation.
+- North Corridor requires additional seats.
+
+Alerts must be derived from current application state.
+
+D. AI Insight Card
+
+Display an important recommendation produced from the latest optimization.
+
+Example:
+"Reassigning the available 12-seat authorized van to the North Corridor could reduce the unmet student demand."
+
+The displayed recommendation must correspond to the actual optimizer result.
+
+E. Recent Activity
+
+Show events such as:
+- Transportation plan optimized.
+- Vehicle marked unavailable.
+- Demand updated.
+- Road closure simulated.
+- Alternative allocation generated.
+
+==================================================
+7. LIVE OPERATIONS MODULE
+==================================================
+
+Build an operational interface for transportation administrators.
+
+Include:
+
+- List of all villages.
+- Number of students requiring transportation.
+- Their destination institution.
+- Assigned vehicle.
+- Number of available seats.
+- Remaining unassigned students.
+- Assigned transportation corridor.
+- Allocation status.
+
+Create filters:
+- All villages.
+- Fully served.
+- Partially served.
+- Unserved.
+- High demand.
+- Disrupted routes.
+
+Provide an editable demand form.
+
+Fields:
+- Village name.
+- Student count.
+- Destination.
+- Priority.
+- Assigned corridor.
+
+When the administrator changes a demand value:
+- Update the underlying state.
+- Update related statistics.
+- Update charts.
+- Mark optimization results as outdated.
+- Allow the administrator to optimize again.
+
+Do not collect real student names, personal addresses, phone numbers, or individual travel histories.
+
+Use aggregate transportation data.
+
+==================================================
+8. AI ROUTE OPTIMIZATION ENGINE
+==================================================
+
+THIS IS THE MOST IMPORTANT FEATURE.
+
+Implement a real, deterministic optimization module in a separate file, preferably:
+
+lib/optimizer.ts
+
+The engine must analyze:
+- Student demand by village.
+- Available vehicle capacities.
+- Vehicle availability.
+- Authorized route compatibility.
+- Route distances.
+- Route disruption status.
+- Transportation priority.
+- Remaining available capacity.
+
+OBJECTIVE:
+
+Maximize the number of students who can be safely transported using available approved vehicles while minimizing unnecessary capacity wastage and transportation distance.
+
+IMPLEMENTATION:
+
+Create a deterministic optimization algorithm using:
+- Demand grouping.
+- Vehicle eligibility filtering.
+- Capacity-aware assignment.
+- Route compatibility.
+- Distance penalties.
+- Priority weighting.
+- Unmet demand calculation.
+
+The engine should support multiple vehicles on the same corridor.
+
+A vehicle must never be assigned to two routes simultaneously.
+
+A vehicle must never transport more students than its capacity.
+
+Unavailable vehicles must never be allocated.
+
+Disrupted routes must not be treated as operational.
+
+Only school-authorized transport resources should be eligible.
+
+Make all constraints explicit in code and tests.
+
+THE OPTIMIZATION OUTPUT MUST INCLUDE:
+
+1. Recommended vehicle assignments.
+2. Number of students served.
+3. Remaining unmet demand.
+4. Seat utilization percentage.
+5. Route coverage.
+6. Unallocated students by village.
+7. Alternative vehicle suggestions.
+8. A comparison against the previous plan.
+9. Explanation of why each allocation was recommended.
+
+The optimization should prioritize student coverage and then minimize waste and distance.
+
+Create a clean function such as:
+
+optimizeTransportPlan(demand, vehicles, routes, disruptions)
+
+It should return a typed, structured result.
+
+Add unit tests verifying:
+- No vehicle capacity is exceeded.
+- No unavailable vehicle is assigned.
+- No vehicle appears in multiple simultaneous allocations.
+- Unserved student counts are calculated correctly.
+- Disrupted routes are excluded.
+- The same input produces the same output.
+- Total students served never exceeds total demand.
+
+==================================================
+9. ROUTE OPTIMIZER INTERFACE
+==================================================
+
+Build an impressive interactive page.
+
+LEFT PANEL:
+- Village demand list.
+- Available vehicles.
+- Route selector.
+- Priority information.
+
+CENTER:
+- Network visualization.
+- Suggested vehicle assignments.
+- Route connections.
+
+RIGHT PANEL:
+- Optimization results.
+- Students served.
+- Unmet demand.
+- Capacity utilization.
+- Recommendation explanation.
+
+Add a prominent button:
+
+OPTIMIZE TRANSPORT NETWORK
+
+When clicked:
+
+1. Collect current state.
+2. Execute the optimization engine.
+3. Calculate improved vehicle allocation.
+4. Animate KPI changes.
+5. Highlight updated route assignments.
+6. Display an optimization report.
+7. Show a clear before-and-after comparison.
+
+Add another action:
+
+APPLY RECOMMENDED PLAN
+
+This must actually update the current operational plan.
+
+Provide a way to revert to the previous plan.
+
+==================================================
+10. AI-POWERED DEMAND FORECASTING
+==================================================
+
+Create a separate demand prediction module.
+
+Show:
+- Historical student demand.
+- Estimated demand for the upcoming school days.
+- Route-level demand changes.
+- Expected capacity shortages.
+- Villages at risk of transportation disruption.
+
+Use an explainable baseline forecast computed from seeded synthetic historical data.
+
+Do not claim to have trained a machine-learning model on real-world transport records.
+
+For example:
+
+Monday: 72 students
+Tuesday: 78 students
+Wednesday: 81 students
+Thursday: 86 students
+Friday: 91 students
+
+Show a projected five-day trend.
+
+Allow the user to adjust:
+- Expected attendance percentage.
+- Enrollment increase.
+- Special school event demand.
+- Temporary route closures.
+
+Update the forecast when values change.
+
+Display the method and assumptions behind each prediction.
+
+Clearly distinguish estimates from observed values.
+
+==================================================
+11. AI INTELLIGENCE LAB
+==================================================
+
+Create a dedicated area demonstrating effective prompt engineering.
+
+This feature is essential to the competition.
+
+Include a visually attractive AI Prompt Laboratory.
+
+FEATURE A: PROMPT EDITOR
+
+Allow an administrator to enter a transportation planning request.
+
+Example:
+
+"Analyze the current transportation network. Identify routes with insufficient capacity. Recommend an optimal allocation using only available authorized vehicles. Minimize the number of students left unserved. Explain the trade-offs and identify any villages requiring alternative arrangements."
+
+Allow the administrator to edit this prompt.
+
+FEATURE B: PROMPT ITERATIONS
+
+Demonstrate three stages of prompt improvement.
+
+VERSION 1:
+Basic instruction:
+"Optimize the available buses."
+
+VERSION 2:
+Add constraints:
+"Optimize the available buses while considering passenger capacity, route distance, route disruption, and student demand."
+
+VERSION 3:
+Add structured reasoning:
+"Act as a rural transportation planning specialist. Evaluate each village's aggregate demand, eligible vehicles, route compatibility, road accessibility, passenger capacity, and unmet demand. Recommend a capacity-constrained allocation. Never exceed vehicle capacity. Explain the reasoning and quantify the transportation trade-offs."
+
+Display these prompt versions and their differences.
+
+Let users choose a version and execute the corresponding planning analysis.
+
+FEATURE C: GEMINI INTEGRATION
+
+Implement an optional server-side integration with the current official Google Gen AI SDK.
+
+Use GEMINI_API_KEY as a server-side environment variable.
+
+Never expose the API key in client-side JavaScript.
+
+Create an API endpoint:
+
+POST /api/ai/plan
+
+Send only aggregate demand, route, vehicle, disruption, and optimization information.
+
+The language model should:
+- Explain the computed allocations.
+- Identify bottlenecks.
+- Summarize the risks.
+- Suggest operational improvements.
+- Generate a readable transportation report.
+
+IMPORTANT:
+The deterministic optimizer remains the authority for numerical allocation and capacity constraints. The language model must not invent vehicle assignments, seats, routes, or live conditions.
+
+Validate structured model output before displaying it.
+
+If the API key is unavailable:
+- Automatically use a deterministic explanation generator.
+- Show a clear "Demo AI Mode" indicator.
+- Keep the entire product functional.
+- Do not display a fake message claiming Gemini was contacted.
+
+FEATURE D: AI OUTPUT
+
+Return these sections:
+
+1. Situation Analysis
+2. Main Transportation Bottlenecks
+3. Recommended Actions
+4. Expected Impact
+5. Risks and Limitations
+6. Assumptions
+
+FEATURE E: PROMPT HISTORY
+
+Save:
+- Prompt version.
+- User-entered prompt.
+- Input scenario.
+- Generated output.
+- Timestamp.
+
+Allow previous outputs to be reviewed.
+
+==================================================
+12. TRANSPORT RESOURCE MANAGEMENT
+==================================================
+
+Create a management interface for all transport resources.
+
+DEMO VEHICLES:
+
+BUS-01
+Type: Government Bus
+Capacity: 40
+Status: Available
+Corridor: North
+
+BUS-02
+Type: Government Bus
+Capacity: 30
+Status: Available
+Corridor: North / South
+
+BUS-03
+Type: Government Bus
+Capacity: 35
+Status: Available
+Corridor: South
+
+VAN-01
+Type: School-Authorized Van
+Capacity: 12
+Status: Available
+Corridor: North / South
+
+Make all these values editable through the application.
+
+Include:
+- Vehicle type.
+- Seating capacity.
+- Status.
+- Authorized corridors.
+- Assigned route.
+- Utilization.
+
+Provide actions:
+- Add vehicle.
+- Edit vehicle.
+- Mark unavailable.
+- Restore availability.
+- View vehicle allocation.
+
+Use confirmation dialogs for important state changes.
+
+==================================================
+13. SCENARIO SIMULATOR AND SURPRISE CHALLENGE
+==================================================
+
+Build a dedicated interactive simulation engine.
+
+THIS FEATURE SHOULD IMPRESS THE EVALUATORS.
+
+Add a large panel titled:
+
+WHAT IF SOMETHING GOES WRONG?
+
+The administrator should be able to inject unexpected transportation challenges.
+
+Implement these scenarios:
+
+SCENARIO 1: BUS BREAKDOWN
+A currently assigned vehicle suddenly becomes unavailable.
+
+Expected behavior:
+- Remove the vehicle from available capacity.
+- Recompute assignments.
+- Identify affected students.
+- Suggest other eligible vehicles.
+- Display newly unmet demand.
+
+SCENARIO 2: ROAD CLOSURE
+One operational corridor becomes inaccessible.
+
+Expected behavior:
+- Mark the route disrupted.
+- Recalculate eligible assignments.
+- Display affected villages.
+- Recommend feasible alternative corridors if available.
+
+SCENARIO 3: UNEXPECTED STUDENT SURGE
+A village suddenly receives additional transport demand.
+
+Expected behavior:
+- Increase village demand.
+- Recalculate available seating.
+- Highlight capacity shortages.
+- Recommend additional approved transport resources.
+
+SCENARIO 4: VEHICLE CAPACITY REDUCTION
+One bus has fewer usable seats than expected.
+
+Expected behavior:
+- Update effective vehicle capacity.
+- Re-run the optimizer.
+- Identify additional unserved students.
+
+SCENARIO 5: REMOTE VILLAGE ADDED
+A remote village is added to the network.
+
+Expected behavior:
+- Add student demand.
+- Evaluate route compatibility.
+- Identify the nearest feasible corridor using the supplied demonstration network data.
+- Show whether existing vehicles can support it.
+
+Add a prominent button:
+
+INJECT SURPRISE CHALLENGE
+
+It should choose or allow selection of one of the above scenarios.
+
+AFTER INJECTION:
+
+Display:
+- Original transportation situation.
+- New situation.
+- Number of affected students.
+- Capacity difference.
+- Optimizer recommendation.
+- Recovery actions.
+- Final result.
+
+Provide a RESET SCENARIO action.
+
+All simulations must be reproducible and use actual application state.
+
+==================================================
+14. DEMONSTRATION DATA
+==================================================
+
+Use this initial fictional dataset.
+
+DESTINATION:
+Saraswati Rural PU College.
+
+VILLAGES:
+
+Kallur:
+28 students
+North Corridor
+
+Nandihalli:
+16 students
+North Corridor
+
+Lakshmipura:
+22 students
+South Corridor
+
+Harohalli:
+13 students
+South Corridor
+
+TOTAL INITIAL DEMAND:
+79 students.
+
+ROUTES:
+
+RL-01:
+North Corridor
+Kallur -> Nandihalli -> Saraswati Rural PU College
+Illustrative distance: 18 km
+
+RL-02:
+South Corridor
+Lakshmipura -> Harohalli -> Saraswati Rural PU College
+Illustrative distance: 21 km
+
+Use the vehicle information specified in the Transport Resource Management section.
+
+Make the dataset easy to edit.
+
+The map must be a schematic representation, not a claim of actual geographical positioning.
+
+Mark all data as illustrative.
+
+==================================================
+15. INTERACTION AND STATE MANAGEMENT
+==================================================
+
+This application must be interactive.
+
+All primary buttons must perform real actions.
+
+Examples:
+
+- Optimize Plan must run the optimizer.
+- Apply Plan must update allocations.
+- Reset Demo must restore initial data.
+- Add Village must create a new village.
+- Edit Demand must update demand.
+- Add Vehicle must create a resource.
+- Disable Vehicle must change vehicle status.
+- Simulate Breakdown must trigger the disruption scenario.
+- Run AI Analysis must generate a real model response when configured or an honest local fallback.
+- Export Report must download a usable report.
+- Change View must work.
+- Filters must work.
+- Charts must respond to data changes.
+- Dialogs must open and close correctly.
+
+Persist relevant demo state using LocalStorage.
+
+Handle invalid inputs and edge cases.
+
+Use clear success, warning, and error notifications.
+
+Do not create decorative controls that do nothing.
+
+==================================================
+16. EXPORT AND REPORTING
+==================================================
+
+Implement an exportable transportation report.
+
+Include:
+- Report title.
+- Date and time of generation.
+- Total student demand.
+- Total vehicle capacity.
+- Students successfully allocated.
+- Students remaining unallocated.
+- Vehicle assignments.
+- Route status.
+- Optimization reasoning.
+- Scenario information.
+- AI-generated recommendations, when available.
+
+Allow CSV export.
+
+Provide a print-friendly report page that can be saved as PDF using the browser print functionality.
+
+==================================================
+17. RESPONSIBLE DESIGN AND DATA PRIVACY
+==================================================
+
+This is a transportation coordination demonstration, not an identity-tracking system.
+
+Never expose:
+- Student personal names.
+- Individual phone numbers.
+- Home addresses.
+- Individual location tracking.
+- Personal travel histories.
+
+Use aggregate demand and approved transport resources.
+
+Do not create open ride matching between minors and unknown private drivers.
+
+Alternative transportation recommendations must be limited to approved school, government, or authorized community transportation resources.
+
+Clearly state that a real deployment would require appropriate institutional authorization, guardian consent where applicable, verified providers, and safety procedures.
+
+==================================================
+18. CODE STRUCTURE
+==================================================
+
+Organize the project cleanly.
+
+Suggested structure:
+
+app/
+  page.tsx
+  layout.tsx
+  globals.css
+  api/
+    ai/
+      plan/
+        route.ts
+
+components/
+  layout/
+  dashboard/
+  operations/
+  optimizer/
+  map/
+  forecasting/
+  ai-lab/
+  simulator/
+  vehicles/
+  shared/
+
+lib/
+  optimizer.ts
+  forecast.ts
+  demo-data.ts
+  ai-service.ts
+  prompt-templates.ts
+  storage.ts
+  report-export.ts
+  utils.ts
+
+types/
+  transport.ts
+  ai.ts
+
+tests/
+  optimizer.test.ts
+
+docs/
+  architecture.md
+  prompt-iterations.md
+  demo-script.md
+
+README.md
+.env.example
+
+Adapt the organization as needed, but preserve clear separation between business logic and UI.
+
+==================================================
+19. README AND PROJECT DOCUMENTATION
+==================================================
+
+Create a professional README.
+
+Include:
+
+- Project name.
+- Problem statement.
+- Proposed solution.
+- Key features.
+- Technical architecture.
+- AI integration approach.
+- Optimization methodology.
+- How to run locally.
+- Environment variable setup.
+- Deployment instructions.
+- Demo instructions.
+- Privacy and safety considerations.
+- Known limitations.
+
+Create a separate prompt-iterations.md showing:
+- Initial prompt.
+- Improved prompt.
+- Final structured prompt.
+- Changes introduced in each iteration.
+- Why the improvements matter.
+
+This documentation will support the competition's evaluation of prompt quality, iterations, and AI utilization.
+
+==================================================
+20. QUALITY ASSURANCE
+==================================================
+
+Before declaring the task complete:
+
+1. Inspect every generated file.
+2. Install all required dependencies.
+3. Run the application.
+4. Run TypeScript checks.
+5. Run unit tests.
+6. Run the production build.
+7. Fix all critical errors.
+8. Check for broken imports.
+9. Check all navigation routes.
+10. Verify every primary interaction.
+11. Verify LocalStorage persistence.
+12. Test the optimizer with insufficient capacity.
+13. Test a vehicle breakdown.
+14. Test a road closure.
+15. Verify no capacity violations.
+16. Verify the AI fallback.
+17. Verify responsive layout.
+18. Check browser console errors where possible.
+
+Do not claim a feature is working unless it has been implemented and tested.
+
+==================================================
+21. THREE-HOUR HACKATHON PRIORITY
+==================================================
+
+Work in priority order.
+
+PHASE 1 — FOUNDATION:
+- Initialize the project.
+- Set up the design system.
+- Create sidebar and layout.
+- Create demonstration dataset.
+
+PHASE 2 — CORE FUNCTIONALITY:
+- Implement dashboard.
+- Implement transport management.
+- Implement deterministic optimizer.
+- Implement route visualization.
+
+PHASE 3 — INTELLIGENCE:
+- Implement forecasting.
+- Implement Gemini integration with fallback.
+- Implement AI Prompt Lab.
+- Implement explanation generation.
+
+PHASE 4 — DIFFERENTIATION:
+- Implement surprise scenarios.
+- Implement before-and-after comparisons.
+- Implement transport reports.
+
+PHASE 5 — QUALITY:
+- Test.
+- Fix.
+- Polish.
+- Prepare deployment.
+
+Prioritize a fully functional core application over unfinished advanced features.
+
+If time becomes constrained, preserve:
+1. Dashboard.
+2. Working optimizer.
+3. Vehicle allocation.
+4. Scenario simulation.
+5. AI explanation.
+6. Prompt iteration documentation.
+
+Do not spend the available development time unnecessarily on complicated infrastructure.
+
+==================================================
+22. FINAL ACCEPTANCE CRITERIA
+==================================================
+
+The final application must:
+
+- Start successfully.
+- Look like a premium professional platform.
+- Have working navigation.
+- Show coherent demonstration data.
+- Provide a functional transportation dashboard.
+- Execute actual capacity-aware optimization.
+- Never overallocate vehicle seats.
+- Support route disruptions.
+- Support vehicle breakdown scenarios.
+- Provide demand estimation.
+- Explain its recommendations.
+- Include the AI Prompt Lab.
+- Show prompt iterations.
+- Work without an API key.
+- Support responsive layouts.
+- Export reports.
+- Include clear documentation.
+- Build successfully for production.
+
+==================================================
+23. FINAL EXECUTION INSTRUCTIONS
+==================================================
+
+Work autonomously.
+
+Do not stop after generating the initial plan.
+
+Do not ask unnecessary questions.
+
+Inspect the current workspace first.
+
+If the workspace is empty, initialize the application.
+
+Create an implementation plan, then execute it.
+
+When a technical issue appears:
+- Investigate the root cause.
+- Fix the underlying problem.
+- Re-run the relevant test.
+- Continue implementation.
+
+Prefer working code over long explanations.
+
+Do not skip important functionality simply to finish quickly.
+
+Do not insert fake APIs or fabricated live transport data.
+
+Do not hardcode changing KPI metrics.
+
+Do not leave TODO placeholders for core functionality.
+
+Do not claim deployment success without verifying the actual deployment.
+
+At completion, provide:
+
+1. Application feature summary.
+2. Project file structure.
+3. Commands to run locally.
+4. Test results.
+5. Production build status.
+6. Environment variable instructions.
+7. Deployment instructions.
+8. Any remaining limitations.
+
+YOUR ULTIMATE GOAL:
+
+Deliver a polished, functioning, demo-ready LASTMILE AI application that convincingly demonstrates how AI-assisted decision-making can improve rural student transportation through intelligent allocation, demand analysis, disruption recovery, and explainable recommendations.
+
+BUILD THE COMPLETE APPLICATION NOW.
+
+
+Act as a principal AI engineer specializing in intelligent logistics optimization.
+
+Audit LASTMILE AI's existing optimization engine and AI reasoning system.
+
+Improve its ability to handle:
+
+1. Limited vehicle capacity.
+2. Uneven student demand across villages.
+3. Multiple eligible vehicles.
+4. Vehicle breakdowns.
+5. Road closures.
+6. Alternative authorized routes.
+7. Unexpected demand surges.
+8. Unserved student demand.
+
+The optimization system must prioritize maximizing the number of students transported without violating constraints.
+
+Improve the recommendation explanation.
+
+For every recommended vehicle allocation, explain:
+
+- Why this vehicle was selected.
+- Why this route was selected.
+- How many students it can transport.
+- How much capacity remains.
+- What happens if this allocation is unavailable.
+- Which students remain unserved.
+
+Ensure that numerical allocations come from the deterministic optimization engine rather than invented language-model output.
+
+Add tests for any new functionality.
+
+Do not sacrifice existing functionality.
+/goal
+
+You are now operating as a senior emergency transportation
+systems engineer, full-stack developer, AI engineer,
+route optimization specialist, and hackathon competition expert.
+
+You have an EXISTING application called LASTMILE AI,
+built for the ROUTELESS: THE LAST MILE challenge.
+
+YOUR NEW MISSION:
+
+Adapt the existing application to handle a complex,
+simultaneous transportation emergency called:
+
+THE EXAM DAY CRISIS.
+
+This is a surprise challenge in which several unexpected
+events happen simultaneously.
+
+You have a strict implementation window of 100 minutes.
+
+You must inspect the existing codebase, understand its
+current architecture, and modify it to support the new crisis.
+
+DO NOT rebuild the application from scratch.
+DO NOT delete working features.
+DO NOT replace the existing design system unnecessarily.
+DO NOT create a separate disconnected prototype.
+
+Extend the existing application into a functional
+EXAM DAY EMERGENCY TRANSPORTATION COMMAND CENTER.
+
+====================================================
+1. THE OFFICIAL SURPRISE CHALLENGE
+====================================================
+
+The transportation network suddenly faces four simultaneous
+emergencies:
+
+EVENT 1 — TWO GOVERNMENT BUSES BREAK DOWN
+
+Two government buses become unavailable due to technical issues.
+
+The transportation network must:
+- Immediately mark both buses unavailable.
+- Remove their capacities from usable resources.
+- Identify their previously assigned students.
+- Reallocate affected students.
+- Recalculate available transportation capacity.
+- Prevent unavailable buses from appearing in new assignments.
+
+EVENT 2 — STUDENT DEMAND INCREASES BY 40%
+
+Transportation demand suddenly increases by 40%.
+
+The system must:
+- Recalculate demand for every village.
+- Update total student demand.
+- Update capacity requirements.
+- Update route-level demand.
+- Identify the most affected villages.
+- Calculate unmet transportation demand.
+
+Apply the increase to the current total demand, using a
+consistent integer allocation method so the sum remains
+exactly equal to the rounded-up total.
+
+EVENT 3 — A MAJOR ROAD IS BLOCKED BY FLOODING
+
+A major road connecting two villages becomes inaccessible.
+
+The system must:
+- Mark that road as CLOSED.
+- Remove it from all eligible route calculations.
+- Identify affected routes.
+- Find alternative paths through the remaining road network.
+- Calculate detour travel time.
+- Highlight longer journeys.
+- Recalculate student arrival estimates.
+
+NEVER allow the optimizer to use the flooded road.
+
+EVENT 4 — EXAMINATIONS ARE STARTING WITHIN TWO HOURS
+
+Several students have important examinations within the
+next 120 minutes.
+
+The system must:
+- Identify examination-bound student groups.
+- Record their examination start times.
+- Calculate the latest feasible arrival time.
+- Prioritize examination-bound students.
+- Allocate transport based on actual urgency and feasibility.
+- Minimize the number of exam students unable to arrive
+  before their examination.
+- Clearly identify students at risk of arriving late.
+
+THESE FOUR EVENTS MUST OCCUR TOGETHER.
+
+Do not implement them as four unrelated scenarios.
+
+Build one coordinated emergency-response system.
+
+====================================================
+2. CORE PRODUCT CONCEPT
+====================================================
+
+Create a new application mode called:
+
+EXAM DAY CRISIS MODE
+
+Subtitle:
+
+"Every minute matters. Every available seat counts."
+
+This must behave like an emergency transportation command center.
+
+The application must help an administrator answer:
+
+1. How many students need transport now?
+2. How much vehicle capacity remains?
+3. Which students have upcoming examinations?
+4. Which students have the earliest deadlines?
+5. Which buses are unavailable?
+6. Which roads are blocked?
+7. What alternative routes are feasible?
+8. Which students can still reach college on time?
+9. Which students remain unserved or at risk?
+10. What actions should administrators take immediately?
+
+The entire system must recalculate when the administrator
+changes a vehicle, demand value, route, or examination deadline.
+
+====================================================
+3. PRESERVE AND EXTEND THE CURRENT APPLICATION
+====================================================
+
+First inspect the existing source code.
+
+Identify:
+- Existing page structure.
+- Existing dashboard.
+- Current demonstration dataset.
+- Vehicle data structures.
+- Village data structures.
+- Route information.
+- Optimization functions.
+- AI integration.
+- LocalStorage implementation.
+- Existing styling and design system.
+
+Reuse existing components whenever possible.
+
+Add a dedicated navigation option:
+
+EXAM DAY CRISIS
+
+Also add a prominent emergency activation button
+on the existing dashboard.
+
+When the administrator enters crisis mode:
+- Activate the crisis scenario.
+- Apply the four emergencies.
+- Generate an updated transportation plan.
+- Display emergency-specific KPIs.
+- Preserve access to the normal dashboard.
+
+Add a RESTORE NORMAL OPERATIONS button.
+
+This must restore the original baseline data correctly.
+
+====================================================
+4. DEMONSTRATION DATA AND CRISIS CALCULATIONS
+====================================================
+
+Use the existing demonstration dataset.
+
+BASELINE VILLAGE DEMAND:
+
+Kallur: 28 students
+Nandihalli: 16 students
+Lakshmipura: 22 students
+Harohalli: 13 students
+
+Total: 79 students.
+
+VEHICLE DATA:
+
+BUS-01:
+Government bus
+Capacity: 40 seats
+
+BUS-02:
+Government bus
+Capacity: 30 seats
+
+BUS-03:
+Government bus
+Capacity: 35 seats
+
+VAN-01:
+School-authorized van
+Capacity: 12 seats
+
+Baseline vehicle capacity: 117 seats.
+
+CRISIS VEHICLE STATUS:
+
+For the default demonstration:
+- BUS-01: Breakdown.
+- BUS-02: Breakdown.
+- BUS-03: Available.
+- VAN-01: Available.
+
+Allow the administrator to select a different pair
+of government buses for the breakdown simulation.
+
+When the crisis is activated:
+
+Remaining nominal capacity:
+
+BUS-03 = 35 seats
+VAN-01 = 12 seats
+
+TOTAL = 47 seats.
+
+CRISIS DEMAND:
+
+Increase total baseline demand by 40%.
+
+79 × 1.40 = 110.6.
+
+Rounded-up total demand = 111 students.
+
+Use a largest-remainder integer allocation method
+to distribute this demand across the four villages.
+
+Illustrative resulting demand:
+
+Kallur: 39
+Nandihalli: 23
+Lakshmipura: 31
+Harohalli: 18
+
+Total: 111 students.
+
+Result:
+
+Total demand: 111
+Currently available nominal seats: 47
+Potential first-wave capacity shortage: 64 seats.
+
+These are demonstration calculations, not live operational data.
+
+IMPORTANT:
+
+The optimizer must calculate all values dynamically.
+Do not hardcode 111 or 47 into dashboard components.
+
+====================================================
+5. EXAMINATION PRIORITY DATA MODEL
+====================================================
+
+Introduce examination-bound student cohorts.
+
+For the demonstration, use:
+
+Kallur:
+15 examination-bound students.
+Examination starts in 100 minutes.
+
+Nandihalli:
+9 examination-bound students.
+Examination starts in 110 minutes.
+
+Lakshmipura:
+13 examination-bound students.
+Examination starts in 90 minutes.
+
+Harohalli:
+7 examination-bound students.
+Examination starts in 120 minutes.
+
+Total examination-bound demand: 44 students.
+
+These cohorts are illustrative.
+
+The rest of each village's student demand must be classified
+as standard transportation demand.
+
+Each group should support:
+
+- Village ID.
+- Total student demand.
+- Examination student count.
+- Examination start time.
+- Required arrival buffer.
+- Estimated travel time.
+- Transportation assignment.
+- Predicted arrival time.
+- On-time feasibility.
+- Current priority.
+- Unallocated student count.
+
+Use aggregate counts only.
+
+Do not introduce student personal identities.
+
+Make all examination schedules editable.
+
+====================================================
+6. EXAM PRIORITY ALGORITHM
+====================================================
+
+Create a dedicated emergency prioritization engine.
+
+File suggestion:
+
+lib/exam-priority.ts
+
+Its responsibility is to evaluate which student groups
+must be transported first.
+
+For every examination-bound group, calculate:
+
+Time remaining =
+Examination start time - Current simulation time.
+
+Latest acceptable arrival =
+Examination start time - Arrival safety buffer.
+
+Suggested initial institutional arrival buffer:
+10 minutes.
+
+Estimated slack =
+Latest acceptable arrival - Estimated arrival time.
+
+Interpretation:
+
+Positive slack:
+The group can potentially reach the institution on time.
+
+Zero slack:
+The group is at its latest acceptable arrival time.
+
+Negative slack:
+The current projected journey would make the students late.
+
+Assign urgency categories:
+
+CRITICAL:
+Very little time remains or projected arrival has negative slack.
+
+HIGH:
+The examination is approaching.
+
+NORMAL:
+Sufficient time remains.
+
+Use actual time calculations rather than arbitrary
+visual priority labels.
+
+IMPORTANT:
+
+Examination priority must influence vehicle allocation.
+
+Do not simply sort students visually and then allocate
+vehicles without considering their deadlines.
+
+The optimizer must prefer feasible examination transport
+over non-examination demand when capacity is constrained.
+
+However, never promise on-time delivery when the
+journey cannot physically meet the deadline.
+
+====================================================
+7. FLOOD-AWARE ROUTE NETWORK
+====================================================
+
+Extend the existing route visualization into a road graph.
+
+Use the following illustrative network travel times:
+
+Kallur <-> Nandihalli: 8 minutes.
+
+Nandihalli <-> College: 10 minutes.
+
+Lakshmipura <-> Harohalli: 9 minutes.
+
+Harohalli <-> College: 12 minutes.
+
+Nandihalli <-> Lakshmipura: 12 minutes.
+
+Nandihalli <-> Harohalli: 18 minutes.
+
+The road between Nandihalli and Lakshmipura
+is the flooded road in the default scenario.
+
+Mark it as:
+
+CLOSED — FLOODING.
+
+The alternative connection is:
+
+Nandihalli
+    ->
+Harohalli
+    ->
+Lakshmipura.
+
+This detour takes 27 minutes compared with the original
+12-minute direct road.
+
+The alternative route therefore introduces a 15-minute
+travel penalty.
+
+All travel times are illustrative simulation inputs.
+
+IMPLEMENTATION:
+
+Create a road graph with:
+- Nodes.
+- Edges.
+- Travel times.
+- Road status.
+- Road condition.
+- Alternative connectivity.
+
+Use Dijkstra's shortest-path algorithm or another
+appropriate deterministic shortest-path algorithm.
+
+The pathfinding function MUST exclude closed edges.
+
+Example:
+
+findShortestAvailablePath(origin, destination, roads)
+
+It should return:
+
+- Path.
+- Total travel time.
+- Distance if available.
+- Road closures avoided.
+- Detour penalty.
+- Feasibility.
+
+If no valid path exists, return a clear no-route result.
+
+Do not silently create an imaginary shortcut.
+
+====================================================
+8. EMERGENCY VEHICLE OPTIMIZATION ENGINE
+====================================================
+
+THIS IS THE MOST IMPORTANT TECHNICAL COMPONENT.
+
+Create or extend:
+
+lib/crisis-optimizer.ts
+
+The engine must jointly consider:
+
+- Vehicle breakdowns.
+- Current available vehicle capacity.
+- Demand increased by 40%.
+- Examination deadlines.
+- Village pickup requirements.
+- Road closures.
+- Alternative routes.
+- Journey durations.
+- Vehicle eligibility.
+- Student arrival buffers.
+
+OBJECTIVE:
+
+Maximize the number of examination-bound students
+who can reach their institution before their examination
+deadlines.
+
+After satisfying feasible examination demand, maximize
+the number of additional students transported.
+
+Minimize:
+- Unnecessary travel time.
+- Detour penalties.
+- Unused capacity.
+- Students missing examinations.
+- Unserved transportation demand.
+
+STRICT CONSTRAINTS:
+
+1. Never use a broken-down vehicle.
+2. Never exceed vehicle seating capacity.
+3. Never use a flooded road.
+4. Never allocate a vehicle to two simultaneous trips.
+5. Never allocate the same student demand twice.
+6. Never claim a late arrival as an on-time arrival.
+7. Never invent available vehicles.
+8. Never exceed the actual student demand.
+9. Respect the vehicle's approved transport category
+   and corridor restrictions.
+10. Do not assume multiple trips unless the vehicle can
+    complete the full trip, return, and depart again
+    within the available timeline.
+
+Use a deterministic, reproducible optimization approach.
+
+For the small demonstration network, use a transparent
+heuristic with:
+- Examination deadline prioritization.
+- Capacity-aware allocation.
+- Route compatibility.
+- Shortest available path calculations.
+- Remaining-capacity tracking.
+- Arrival feasibility checks.
+- Route sequence evaluation.
+
+If practical, improve the result through a local-search
+or alternative assignment evaluation step.
+
+Do not falsely claim mathematical global optimality.
+
+The output must be structured and auditable.
+
+OUTPUT FIELDS:
+
+{
+  "totalDemand": 111,
+  "availableCapacity": 47,
+  "examDemand": 44,
+  "examStudentsOnTime": 0,
+  "examStudentsAtRisk": 0,
+  "otherStudentsServed": 0,
+  "unallocatedStudents": 0,
+  "assignments": [],
+  "unmetDemandByVillage": [],
+  "vehicleUtilization": [],
+  "routeChanges": [],
+  "arrivalPredictions": [],
+  "warnings": [],
+  "recommendations": []
+}
+
+The numerical values above are only schema examples.
+Calculate actual results; never hardcode them.
+
+For every vehicle assignment return:
+
+- Vehicle ID.
+- Assigned route.
+- Pickup villages.
+- Students collected at each village.
+- Total students.
+- Vehicle capacity.
+- Remaining seats.
+- Departure time.
+- Estimated journey time.
+- Arrival time.
+- Assigned examination cohorts.
+- On-time status.
+- Alternative route explanation.
+
+For every unserved group return:
+
+- Village.
+- Number of students.
+- Examination-bound count.
+- Reason for being unallocated.
+- Available alternative actions.
+
+If capacity is insufficient, report the shortfall honestly.
+
+====================================================
+9. VEHICLE DISPATCH SCHEDULING
+====================================================
+
+Build a dispatch scheduling component.
+
+For the simulation, assume available vehicles are
+stationed at the institution depot when the crisis begins.
+
+Allow the optimizer to construct pickup tours.
+
+A trip must consider:
+
+1. Vehicle departure from the institution.
+2. Travel to the first pickup.
+3. Boarding time.
+4. Travel between subsequent pickup villages.
+5. Final return to the institution.
+6. Arrival time of examination-bound cohorts.
+
+Use an initial boarding allowance of 3 minutes per village.
+
+Use the actual road graph to calculate travel.
+
+Allow multiple trips only when:
+- The previous trip has completed.
+- The vehicle has returned to the depot.
+- An explicit turnaround interval is included.
+- The next departure can meet its relevant deadline.
+
+Do not schedule overlapping trips.
+
+Build a timeline for each available vehicle.
+
+Display:
+- Departed.
+- Picking up.
+- En route.
+- Returning.
+- Completed.
+- Delayed.
+- Unavailable.
+
+All displayed statuses must come from simulation state.
+
+====================================================
+10. CRISIS COMMAND CENTER UI
+====================================================
+
+Create an impressive new page:
+
+/crisis
+
+This must be the main demonstration screen for the
+surprise challenge.
+
+DESIGN:
+
+Use the existing premium dark navy LASTMILE AI design system.
+
+Create a dramatic but professional emergency dashboard.
+
+TOP HEADER:
+
+EXAM DAY EMERGENCY COMMAND CENTER
+
+Subtitle:
+
+"Coordinating scarce transport resources under
+time-critical conditions."
+
+Display:
+- CRISIS ACTIVE badge.
+- Simulation clock.
+- Time remaining until the earliest examination.
+- Restore normal operations button.
+
+TOP KPI CARDS:
+
+1. Total Crisis Demand.
+2. Available Seats.
+3. Examination Students.
+4. Students Reaching on Time.
+5. Students at Risk.
+6. Vehicles Operational.
+
+Every KPI must be dynamically calculated.
+
+EMERGENCY STATUS PANEL:
+
+Show four simultaneous emergency cards:
+
+BUS BREAKDOWN:
+2 vehicles unavailable.
+
+DEMAND SURGE:
+40% increase in demand.
+
+FLOOD ALERT:
+Nandihalli-Lakshmipura road closed.
+
+EXAMINATION ALERT:
+Multiple examination deadlines within 120 minutes.
+
+Each emergency card should display:
+- Severity.
+- Affected resources.
+- Status.
+- Recommended response.
+
+TRANSPORTATION MAP:
+
+Create a large interactive SVG network map.
+
+Display:
+- Four villages.
+- Educational institution.
+- Operational routes.
+- Available vehicles.
+- Broken-down vehicles.
+- Flooded road.
+- Alternative detour.
+
+Visual conventions:
+
+Operational road:
+Solid green or blue line.
+
+Flooded road:
+Red dashed line with closure icon.
+
+Alternative route:
+Amber or cyan dotted line.
+
+Available vehicle:
+Green vehicle marker.
+
+Broken vehicle:
+Red vehicle marker.
+
+Critical examination group:
+Red or amber priority marker.
+
+Clicking on a village should show:
+- Total demand.
+- Examination students.
+- Deadline.
+- Available transport.
+- Unmet demand.
+
+Clearly label the map as an illustrative simulation,
+not live geographical or GPS information.
+
+====================================================
+11. EXAM PRIORITY DISPATCH PANEL
+====================================================
+
+Create a panel titled:
+
+EXAM-FIRST DISPATCH PRIORITY
+
+Display all examination-bound village groups.
+
+Columns:
+
+- Village.
+- Examination students.
+- Exam starts in.
+- Estimated journey.
+- Arrival buffer.
+- Priority.
+- Assigned vehicle.
+- Arrival feasibility.
+
+Sort by deadline and actual estimated slack.
+
+Highlight critical groups.
+
+Show exactly why the group has been given its priority.
+
+Create a button:
+
+RECALCULATE EXAM PRIORITIES
+
+It should use the current simulation clock
+and actual route calculations.
+
+====================================================
+12. ALTERNATIVE ROUTE AND RECOVERY PANEL
+====================================================
+
+Build a separate panel:
+
+FLOOD RESPONSE & ROUTE RECOVERY
+
+Display:
+
+Original path:
+Nandihalli -> Lakshmipura.
+
+Status:
+BLOCKED BY FLOODING.
+
+Alternative:
+Nandihalli -> Harohalli -> Lakshmipura.
+
+Show:
+- Original estimated duration.
+- Alternative duration.
+- Additional journey time.
+- Vehicles affected.
+- Groups affected.
+- New arrival feasibility.
+
+Allow the administrator to compare:
+- Normal route.
+- Alternative route.
+
+The blocked route must remain unavailable until
+the administrator explicitly resets the scenario.
+
+====================================================
+13. LIVE EMERGENCY ACTIONS
+====================================================
+
+Create action buttons:
+
+1. ACTIVATE CRISIS.
+2. REOPTIMIZE TRANSPORT.
+3. APPLY EMERGENCY PLAN.
+4. VIEW UNALLOCATED STUDENTS.
+5. EXPORT EMERGENCY REPORT.
+6. RESET CRISIS.
+
+ACTIVATE CRISIS must:
+- Snapshot baseline data.
+- Mark two government buses unavailable.
+- Apply the 40% demand increase.
+- Close the selected road.
+- Activate examination priorities.
+- Start the simulation clock.
+- Run the optimizer.
+
+REOPTIMIZE TRANSPORT must:
+- Read the latest application state.
+- Recalculate current capacity.
+- Recompute shortest available routes.
+- Recalculate examination deadlines.
+- Produce a new plan.
+- Compare it with the previous plan.
+
+APPLY EMERGENCY PLAN must actually change the
+operational allocation.
+
+RESET CRISIS must restore the original baseline.
+
+All buttons must work.
+
+====================================================
+14. AI EMERGENCY RESPONSE INTELLIGENCE
+====================================================
+
+Create an impressive AI panel titled:
+
+AI EMERGENCY RESPONSE ADVISOR
+
+This panel must analyze the actual numerical
+optimizer result and produce an operational explanation.
+
+Integrate the existing Gemini API service if available.
+
+If Gemini is unavailable, use a deterministic local
+explanation generator.
+
+Never pretend an external AI model was called if it was not.
+
+THE AI MUST ANALYZE:
+
+1. Severity of the transport disruption.
+2. Remaining available seating capacity.
+3. Examination deadline pressure.
+4. Flood-related detours.
+5. Vehicle utilization.
+6. Most affected villages.
+7. Remaining unmet demand.
+8. Alternative approved transportation resources.
+
+RESPONSE FORMAT:
+
+EXECUTIVE SUMMARY
+
+Explain the current emergency in a few sentences.
+
+IMMEDIATE PRIORITIES
+
+Identify the student groups with the highest urgency.
+
+TRANSPORT ALLOCATION
+
+Explain the selected bus and van assignments.
+
+FLOOD RESPONSE
+
+Explain the alternative route and travel-time impact.
+
+EXAMINATION PROTECTION
+
+Explain which groups can reach the institution
+on time and which cannot.
+
+REMAINING RISKS
+
+Identify unresolved capacity and deadline problems.
+
+RECOMMENDED ACTIONS
+
+Suggest specific administrative next steps.
+
+The model must receive the optimizer's structured output.
+
+It must NOT calculate or invent the primary vehicle allocations.
+
+Numerical facts must always come from the deterministic
+optimization engine.
+
+====================================================
+15. CONTINGENCY TRANSPORT RESOURCES
+====================================================
+
+Create a panel:
+
+ADDITIONAL AUTHORIZED TRANSPORT OPTIONS
+
+This panel can show potential emergency resources such as:
+- Additional government buses.
+- School-authorized vans.
+- Institution-owned vehicles.
+- Verified authorized community transport.
+
+IMPORTANT:
+
+Do not automatically claim these resources are available.
+
+Represent each option with one of these statuses:
+
+CONFIRMED AVAILABLE.
+REQUIRES ADMIN CONFIRMATION.
+UNAVAILABLE.
+
+Allow an administrator to manually add and confirm
+an authorized resource before it enters the optimizer.
+
+Do not recommend unverified private rides for minors.
+
+Do not treat an unconfirmed vehicle as usable capacity.
+
+If there are not enough confirmed vehicles,
+show the real shortage and request administrative escalation.
+
+====================================================
+16. BEFORE-AND-AFTER CRISIS COMPARISON
+====================================================
+
+Build a strong visual comparison section.
+
+Title:
+
+FROM NORMAL OPERATIONS TO EXAM DAY CRISIS
+
+Compare:
+
+BASELINE:
+- 79 students.
+- 117 nominal seats.
+- Four operational vehicles.
+- No simulated flooding.
+
+CRISIS:
+- 111 students.
+- 47 nominal seats.
+- Two operational vehicles.
+- One flooded road.
+- Examination deadlines activated.
+
+Include:
+
+- Demand change.
+- Lost vehicle capacity.
+- Route disruption.
+- Examination priority.
+- Students served.
+- Students still at risk.
+
+The application must distinguish nominal seats
+from actual allocated seats and on-time arrivals.
+
+Show how the emergency plan improves on a naive
+allocation that ignores examination deadlines.
+
+====================================================
+17. INTERACTIVE WHAT-IF CONTROLS
+====================================================
+
+Allow the administrator to change:
+
+- Which two government buses break down.
+- Demand increase percentage.
+- Flooded road.
+- Examination start times.
+- Number of examination-bound students.
+- Vehicle capacity.
+- Route travel time.
+- Additional confirmed resources.
+
+Each modification must invalidate stale results
+and require or trigger recalculation.
+
+Display a visible warning:
+
+"TRANSPORT PLAN OUTDATED — REOPTIMIZE REQUIRED"
+
+Never show old allocations as if they reflect
+the newly modified scenario.
+
+====================================================
+18. REPORT EXPORT
+====================================================
+
+Create an exportable exam-day emergency report.
+
+Include:
+
+- Crisis identification.
+- Simulation timestamp.
+- Total student demand.
+- Available vehicles.
+- Unavailable vehicles.
+- Available seat capacity.
+- Flooded road.
+- Alternative route.
+- Examination-bound students.
+- On-time student count.
+- At-risk student count.
+- Vehicle assignments.
+- Vehicle utilization.
+- Unallocated demand.
+- AI recommendations.
+- Remaining operational limitations.
+
+Allow CSV download and print-to-PDF.
+
+====================================================
+19. DATA SAFETY
+====================================================
+
+Use aggregate student counts only.
+
+Do not create:
+- Student personal names.
+- Phone numbers.
+- Individual home addresses.
+- Individual GPS tracking.
+- Private student travel histories.
+
+Clearly identify all generated village and route
+data as illustrative demonstration data.
+
+====================================================
+20. REQUIRED TECHNICAL MODULES
+====================================================
+
+Extend the existing codebase.
+
+Suggested modules:
+
+lib/
+  crisis-engine.ts
+  crisis-optimizer.ts
+  exam-priority.ts
+  road-network.ts
+  shortest-path.ts
+  dispatch-scheduler.ts
+  emergency-ai.ts
+
+components/
+  crisis/
+    crisis-header.tsx
+    emergency-status.tsx
+    crisis-kpis.tsx
+    crisis-map.tsx
+    exam-priority-panel.tsx
+    dispatch-panel.tsx
+    route-recovery-panel.tsx
+    ai-emergency-advisor.tsx
+    vehicle-timeline.tsx
+    before-after.tsx
+    contingency-resources.tsx
+
+Adapt the structure to the existing architecture.
+
+Maintain strong TypeScript typing.
+
+Separate calculation logic from presentation.
+
+Avoid duplicate optimization implementations.
+
+====================================================
+21. AUTOMATED TESTING
+====================================================
+
+Create tests for the combined crisis.
+
+MANDATORY TESTS:
+
+TEST 1:
+Two government buses become unavailable.
+
+Verify that both are removed from usable capacity.
+
+TEST 2:
+Demand increases by 40%.
+
+Verify that aggregate demand becomes 111
+for the baseline demonstration dataset.
+
+TEST 3:
+Capacity calculation.
+
+Verify that the remaining BUS-03 and VAN-01
+provide 47 nominal seats.
+
+TEST 4:
+Flooded road.
+
+Verify that the Nandihalli-Lakshmipura edge
+cannot appear in any calculated route.
+
+TEST 5:
+Alternative path.
+
+Verify that the detour through Harohalli
+is available and calculates 27 minutes
+against the original 12-minute path.
+
+TEST 6:
+Examination priority.
+
+Verify that earlier examination deadlines
+receive appropriate priority.
+
+TEST 7:
+Arrival feasibility.
+
+Verify that students predicted to arrive
+after the required arrival deadline are marked
+at risk, not on time.
+
+TEST 8:
+Vehicle capacity.
+
+Verify that no assigned vehicle exceeds
+its permitted seating capacity.
+
+TEST 9:
+Vehicle uniqueness.
+
+Verify that a vehicle cannot be assigned
+to simultaneous trips.
+
+TEST 10:
+Demand accounting.
+
+Verify that each student in the aggregate demand
+is either allocated once or counted as unallocated.
+
+TEST 11:
+Resource confirmation.
+
+Verify that an unconfirmed contingency vehicle
+never increases usable capacity.
+
+TEST 12:
+Reset.
+
+Verify that all baseline values and initial
+vehicle statuses are restored correctly.
+
+TEST 13:
+Repeatability.
+
+The same crisis input must produce the same
+optimization output.
+
+TEST 14:
+Live edits.
+
+Verify that changing any critical scenario
+input invalidates previous optimization results.
+
+====================================================
+22. IMPLEMENTATION TIME: 100 MINUTES
+====================================================
+
+You have a strict 100-minute development window.
+
+Prioritize the following:
+
+PHASE 1 — FIRST 10 MINUTES
+
+Inspect the project.
+
+Understand all existing modules.
+
+Identify reusable components.
+
+Do not waste time rebuilding.
+
+PHASE 2 — 10 TO 30 MINUTES
+
+Implement:
+- Crisis scenario data.
+- Two bus breakdowns.
+- 40% demand increase.
+- Examination cohort model.
+- Flooded road state.
+- Restore normal state.
+
+PHASE 3 — 30 TO 55 MINUTES
+
+Implement:
+- Flood-aware shortest-path algorithm.
+- Examination priority calculation.
+- Emergency allocation engine.
+- Capacity validation.
+- Dispatch schedule.
+
+PHASE 4 — 55 TO 75 MINUTES
+
+Implement:
+- Crisis command center.
+- Emergency status cards.
+- Interactive route visualization.
+- Examination priority panel.
+- Alternative route comparison.
+- Live KPIs.
+
+PHASE 5 — 75 TO 90 MINUTES
+
+Implement:
+- AI emergency explanation.
+- Before-and-after comparison.
+- Scenario controls.
+- Report export.
+
+PHASE 6 — 90 TO 100 MINUTES
+
+Run all critical tests.
+
+Fix any blocking errors.
+
+Run a production build.
+
+Verify the application starts.
+
+Prepare the live demonstration.
+
+TIME MANAGEMENT RULE:
+
+If advanced functionality threatens the completion
+of the core emergency workflow, prioritize:
+
+1. Correct emergency state.
+2. Correct capacity.
+3. Valid alternative routes.
+4. Examination-first allocation.
+5. Accurate arrival feasibility.
+6. Working crisis dashboard.
+7. AI explanation.
+8. Additional visual polish.
+
+Do not spend excessive time on nonessential features.
+
+====================================================
+23. FINAL ACCEPTANCE CRITERIA
+====================================================
+
+The surprise challenge is complete only when:
+
+- Existing LASTMILE AI still works.
+- Crisis Mode can be activated.
+- Two government buses are unavailable.
+- Total demand is increased by 40%.
+- Available capacity is recalculated.
+- The flooded road is excluded.
+- Alternative routing works.
+- Examination-bound cohorts are prioritized.
+- Arrival feasibility is calculated.
+- Vehicle assignments obey capacity constraints.
+- No vehicle has overlapping assignments.
+- Unallocated students are reported accurately.
+- The AI advisor explains the actual optimizer output.
+- The scenario can be reset.
+- All primary controls work.
+- Critical automated tests pass.
+- The application builds successfully.
+
+====================================================
+24. FINAL EXECUTION COMMAND
+====================================================
+
+Start by inspecting the existing repository.
+
+Then produce a short implementation plan.
+
+Immediately implement the required changes.
+
+Do not stop after planning.
+
+Do not ask unnecessary questions.
+
+Do not generate only a visual mockup.
+
+Do not fake numerical results.
+
+Do not bypass the real optimization engine with
+hardcoded recommendations.
+
+Test every critical operation.
+
+Fix errors instead of merely documenting them.
+
+At completion, summarize:
+
+1. What was changed.
+2. How the crisis is activated.
+3. How the bus allocation works.
+4. How flooding is handled.
+5. How examination priorities work.
+6. Which automated tests passed.
+7. Any remaining limitations.
+
+YOUR MISSION:
+
+Make LASTMILE AI intelligently respond to THE EXAM DAY CRISIS.
+
+Two buses are down.
+Demand has increased by 40%.
+A major road is flooded.
+Examinations are approaching.
+
+Every available seat matters.
+
+Every minute matters.
+
+BUILD THE WORKING SOLUTION NOW.
+
+/goal
+
+You are now operating as a senior emergency transportation
+systems engineer, full-stack developer, AI engineer,
+route optimization specialist, and hackathon competition expert.
+
+You have an EXISTING application called LASTMILE AI,
+built for the ROUTELESS: THE LAST MILE challenge.
+
+YOUR NEW MISSION:
+
+Adapt the existing application to handle a complex,
+simultaneous transportation emergency called:
+
+THE EXAM DAY CRISIS.
+
+This is a surprise challenge in which several unexpected
+events happen simultaneously.
+
+You have a strict implementation window of 100 minutes.
+
+You must inspect the existing codebase, understand its
+current architecture, and modify it to support the new crisis.
+
+DO NOT rebuild the application from scratch.
+DO NOT delete working features.
+DO NOT replace the existing design system unnecessarily.
+DO NOT create a separate disconnected prototype.
+
+Extend the existing application into a functional
+EXAM DAY EMERGENCY TRANSPORTATION COMMAND CENTER.
+
+====================================================
+1. THE OFFICIAL SURPRISE CHALLENGE
+====================================================
+
+The transportation network suddenly faces four simultaneous
+emergencies:
+
+EVENT 1 — TWO GOVERNMENT BUSES BREAK DOWN
+
+Two government buses become unavailable due to technical issues.
+
+The transportation network must:
+- Immediately mark both buses unavailable.
+- Remove their capacities from usable resources.
+- Identify their previously assigned students.
+- Reallocate affected students.
+- Recalculate available transportation capacity.
+- Prevent unavailable buses from appearing in new assignments.
+
+EVENT 2 — STUDENT DEMAND INCREASES BY 40%
+
+Transportation demand suddenly increases by 40%.
+
+The system must:
+- Recalculate demand for every village.
+- Update total student demand.
+- Update capacity requirements.
+- Update route-level demand.
+- Identify the most affected villages.
+- Calculate unmet transportation demand.
+
+Apply the increase to the current total demand, using a
+consistent integer allocation method so the sum remains
+exactly equal to the rounded-up total.
+
+EVENT 3 — A MAJOR ROAD IS BLOCKED BY FLOODING
+
+A major road connecting two villages becomes inaccessible.
+
+The system must:
+- Mark that road as CLOSED.
+- Remove it from all eligible route calculations.
+- Identify affected routes.
+- Find alternative paths through the remaining road network.
+- Calculate detour travel time.
+- Highlight longer journeys.
+- Recalculate student arrival estimates.
+
+NEVER allow the optimizer to use the flooded road.
+
+EVENT 4 — EXAMINATIONS ARE STARTING WITHIN TWO HOURS
+
+Several students have important examinations within the
+next 120 minutes.
+
+The system must:
+- Identify examination-bound student groups.
+- Record their examination start times.
+- Calculate the latest feasible arrival time.
+- Prioritize examination-bound students.
+- Allocate transport based on actual urgency and feasibility.
+- Minimize the number of exam students unable to arrive
+  before their examination.
+- Clearly identify students at risk of arriving late.
+
+THESE FOUR EVENTS MUST OCCUR TOGETHER.
+
+Do not implement them as four unrelated scenarios.
+
+Build one coordinated emergency-response system.
+
+====================================================
+2. CORE PRODUCT CONCEPT
+====================================================
+
+Create a new application mode called:
+
+EXAM DAY CRISIS MODE
+
+Subtitle:
+
+"Every minute matters. Every available seat counts."
+
+This must behave like an emergency transportation command center.
+
+The application must help an administrator answer:
+
+1. How many students need transport now?
+2. How much vehicle capacity remains?
+3. Which students have upcoming examinations?
+4. Which students have the earliest deadlines?
+5. Which buses are unavailable?
+6. Which roads are blocked?
+7. What alternative routes are feasible?
+8. Which students can still reach college on time?
+9. Which students remain unserved or at risk?
+10. What actions should administrators take immediately?
+
+The entire system must recalculate when the administrator
+changes a vehicle, demand value, route, or examination deadline.
+
+====================================================
+3. PRESERVE AND EXTEND THE CURRENT APPLICATION
+====================================================
+
+First inspect the existing source code.
+
+Identify:
+- Existing page structure.
+- Existing dashboard.
+- Current demonstration dataset.
+- Vehicle data structures.
+- Village data structures.
+- Route information.
+- Optimization functions.
+- AI integration.
+- LocalStorage implementation.
+- Existing styling and design system.
+
+Reuse existing components whenever possible.
+
+Add a dedicated navigation option:
+
+EXAM DAY CRISIS
+
+Also add a prominent emergency activation button
+on the existing dashboard.
+
+When the administrator enters crisis mode:
+- Activate the crisis scenario.
+- Apply the four emergencies.
+- Generate an updated transportation plan.
+- Display emergency-specific KPIs.
+- Preserve access to the normal dashboard.
+
+Add a RESTORE NORMAL OPERATIONS button.
+
+This must restore the original baseline data correctly.
+
+====================================================
+4. DEMONSTRATION DATA AND CRISIS CALCULATIONS
+====================================================
+
+Use the existing demonstration dataset.
+
+BASELINE VILLAGE DEMAND:
+
+Kallur: 28 students
+Nandihalli: 16 students
+Lakshmipura: 22 students
+Harohalli: 13 students
+
+Total: 79 students.
+
+VEHICLE DATA:
+
+BUS-01:
+Government bus
+Capacity: 40 seats
+
+BUS-02:
+Government bus
+Capacity: 30 seats
+
+BUS-03:
+Government bus
+Capacity: 35 seats
+
+VAN-01:
+School-authorized van
+Capacity: 12 seats
+
+Baseline vehicle capacity: 117 seats.
+
+CRISIS VEHICLE STATUS:
+
+For the default demonstration:
+- BUS-01: Breakdown.
+- BUS-02: Breakdown.
+- BUS-03: Available.
+- VAN-01: Available.
+
+Allow the administrator to select a different pair
+of government buses for the breakdown simulation.
+
+When the crisis is activated:
+
+Remaining nominal capacity:
+
+BUS-03 = 35 seats
+VAN-01 = 12 seats
+
+TOTAL = 47 seats.
+
+CRISIS DEMAND:
+
+Increase total baseline demand by 40%.
+
+79 × 1.40 = 110.6.
+
+Rounded-up total demand = 111 students.
+
+Use a largest-remainder integer allocation method
+to distribute this demand across the four villages.
+
+Illustrative resulting demand:
+
+Kallur: 39
+Nandihalli: 23
+Lakshmipura: 31
+Harohalli: 18
+
+Total: 111 students.
+
+Result:
+
+Total demand: 111
+Currently available nominal seats: 47
+Potential first-wave capacity shortage: 64 seats.
+
+These are demonstration calculations, not live operational data.
+
+IMPORTANT:
+
+The optimizer must calculate all values dynamically.
+Do not hardcode 111 or 47 into dashboard components.
+
+====================================================
+5. EXAMINATION PRIORITY DATA MODEL
+====================================================
+
+Introduce examination-bound student cohorts.
+
+For the demonstration, use:
+
+Kallur:
+15 examination-bound students.
+Examination starts in 100 minutes.
+
+Nandihalli:
+9 examination-bound students.
+Examination starts in 110 minutes.
+
+Lakshmipura:
+13 examination-bound students.
+Examination starts in 90 minutes.
+
+Harohalli:
+7 examination-bound students.
+Examination starts in 120 minutes.
+
+Total examination-bound demand: 44 students.
+
+These cohorts are illustrative.
+
+The rest of each village's student demand must be classified
+as standard transportation demand.
+
+Each group should support:
+
+- Village ID.
+- Total student demand.
+- Examination student count.
+- Examination start time.
+- Required arrival buffer.
+- Estimated travel time.
+- Transportation assignment.
+- Predicted arrival time.
+- On-time feasibility.
+- Current priority.
+- Unallocated student count.
+
+Use aggregate counts only.
+
+Do not introduce student personal identities.
+
+Make all examination schedules editable.
+
+====================================================
+6. EXAM PRIORITY ALGORITHM
+====================================================
+
+Create a dedicated emergency prioritization engine.
+
+File suggestion:
+
+lib/exam-priority.ts
+
+Its responsibility is to evaluate which student groups
+must be transported first.
+
+For every examination-bound group, calculate:
+
+Time remaining =
+Examination start time - Current simulation time.
+
+Latest acceptable arrival =
+Examination start time - Arrival safety buffer.
+
+Suggested initial institutional arrival buffer:
+10 minutes.
+
+Estimated slack =
+Latest acceptable arrival - Estimated arrival time.
+
+Interpretation:
+
+Positive slack:
+The group can potentially reach the institution on time.
+
+Zero slack:
+The group is at its latest acceptable arrival time.
+
+Negative slack:
+The current projected journey would make the students late.
+
+Assign urgency categories:
+
+CRITICAL:
+Very little time remains or projected arrival has negative slack.
+
+HIGH:
+The examination is approaching.
+
+NORMAL:
+Sufficient time remains.
+
+Use actual time calculations rather than arbitrary
+visual priority labels.
+
+IMPORTANT:
+
+Examination priority must influence vehicle allocation.
+
+Do not simply sort students visually and then allocate
+vehicles without considering their deadlines.
+
+The optimizer must prefer feasible examination transport
+over non-examination demand when capacity is constrained.
+
+However, never promise on-time delivery when the
+journey cannot physically meet the deadline.
+
+====================================================
+7. FLOOD-AWARE ROUTE NETWORK
+====================================================
+
+Extend the existing route visualization into a road graph.
+
+Use the following illustrative network travel times:
+
+Kallur <-> Nandihalli: 8 minutes.
+
+Nandihalli <-> College: 10 minutes.
+
+Lakshmipura <-> Harohalli: 9 minutes.
+
+Harohalli <-> College: 12 minutes.
+
+Nandihalli <-> Lakshmipura: 12 minutes.
+
+Nandihalli <-> Harohalli: 18 minutes.
+
+The road between Nandihalli and Lakshmipura
+is the flooded road in the default scenario.
+
+Mark it as:
+
+CLOSED — FLOODING.
+
+The alternative connection is:
+
+Nandihalli
+    ->
+Harohalli
+    ->
+Lakshmipura.
+
+This detour takes 27 minutes compared with the original
+12-minute direct road.
+
+The alternative route therefore introduces a 15-minute
+travel penalty.
+
+All travel times are illustrative simulation inputs.
+
+IMPLEMENTATION:
+
+Create a road graph with:
+- Nodes.
+- Edges.
+- Travel times.
+- Road status.
+- Road condition.
+- Alternative connectivity.
+
+Use Dijkstra's shortest-path algorithm or another
+appropriate deterministic shortest-path algorithm.
+
+The pathfinding function MUST exclude closed edges.
+
+Example:
+
+findShortestAvailablePath(origin, destination, roads)
+
+It should return:
+
+- Path.
+- Total travel time.
+- Distance if available.
+- Road closures avoided.
+- Detour penalty.
+- Feasibility.
+
+If no valid path exists, return a clear no-route result.
+
+Do not silently create an imaginary shortcut.
+
+====================================================
+8. EMERGENCY VEHICLE OPTIMIZATION ENGINE
+====================================================
+
+THIS IS THE MOST IMPORTANT TECHNICAL COMPONENT.
+
+Create or extend:
+
+lib/crisis-optimizer.ts
+
+The engine must jointly consider:
+
+- Vehicle breakdowns.
+- Current available vehicle capacity.
+- Demand increased by 40%.
+- Examination deadlines.
+- Village pickup requirements.
+- Road closures.
+- Alternative routes.
+- Journey durations.
+- Vehicle eligibility.
+- Student arrival buffers.
+
+OBJECTIVE:
+
+Maximize the number of examination-bound students
+who can reach their institution before their examination
+deadlines.
+
+After satisfying feasible examination demand, maximize
+the number of additional students transported.
+
+Minimize:
+- Unnecessary travel time.
+- Detour penalties.
+- Unused capacity.
+- Students missing examinations.
+- Unserved transportation demand.
+
+STRICT CONSTRAINTS:
+
+1. Never use a broken-down vehicle.
+2. Never exceed vehicle seating capacity.
+3. Never use a flooded road.
+4. Never allocate a vehicle to two simultaneous trips.
+5. Never allocate the same student demand twice.
+6. Never claim a late arrival as an on-time arrival.
+7. Never invent available vehicles.
+8. Never exceed the actual student demand.
+9. Respect the vehicle's approved transport category
+   and corridor restrictions.
+10. Do not assume multiple trips unless the vehicle can
+    complete the full trip, return, and depart again
+    within the available timeline.
+
+Use a deterministic, reproducible optimization approach.
+
+For the small demonstration network, use a transparent
+heuristic with:
+- Examination deadline prioritization.
+- Capacity-aware allocation.
+- Route compatibility.
+- Shortest available path calculations.
+- Remaining-capacity tracking.
+- Arrival feasibility checks.
+- Route sequence evaluation.
+
+If practical, improve the result through a local-search
+or alternative assignment evaluation step.
+
+Do not falsely claim mathematical global optimality.
+
+The output must be structured and auditable.
+
+OUTPUT FIELDS:
+
+{
+  "totalDemand": 111,
+  "availableCapacity": 47,
+  "examDemand": 44,
+  "examStudentsOnTime": 0,
+  "examStudentsAtRisk": 0,
+  "otherStudentsServed": 0,
+  "unallocatedStudents": 0,
+  "assignments": [],
+  "unmetDemandByVillage": [],
+  "vehicleUtilization": [],
+  "routeChanges": [],
+  "arrivalPredictions": [],
+  "warnings": [],
+  "recommendations": []
+}
+
+The numerical values above are only schema examples.
+Calculate actual results; never hardcode them.
+
+For every vehicle assignment return:
+
+- Vehicle ID.
+- Assigned route.
+- Pickup villages.
+- Students collected at each village.
+- Total students.
+- Vehicle capacity.
+- Remaining seats.
+- Departure time.
+- Estimated journey time.
+- Arrival time.
+- Assigned examination cohorts.
+- On-time status.
+- Alternative route explanation.
+
+For every unserved group return:
+
+- Village.
+- Number of students.
+- Examination-bound count.
+- Reason for being unallocated.
+- Available alternative actions.
+
+If capacity is insufficient, report the shortfall honestly.
+
+====================================================
+9. VEHICLE DISPATCH SCHEDULING
+====================================================
+
+Build a dispatch scheduling component.
+
+For the simulation, assume available vehicles are
+stationed at the institution depot when the crisis begins.
+
+Allow the optimizer to construct pickup tours.
+
+A trip must consider:
+
+1. Vehicle departure from the institution.
+2. Travel to the first pickup.
+3. Boarding time.
+4. Travel between subsequent pickup villages.
+5. Final return to the institution.
+6. Arrival time of examination-bound cohorts.
+
+Use an initial boarding allowance of 3 minutes per village.
+
+Use the actual road graph to calculate travel.
+
+Allow multiple trips only when:
+- The previous trip has completed.
+- The vehicle has returned to the depot.
+- An explicit turnaround interval is included.
+- The next departure can meet its relevant deadline.
+
+Do not schedule overlapping trips.
+
+Build a timeline for each available vehicle.
+
+Display:
+- Departed.
+- Picking up.
+- En route.
+- Returning.
+- Completed.
+- Delayed.
+- Unavailable.
+
+All displayed statuses must come from simulation state.
+
+====================================================
+10. CRISIS COMMAND CENTER UI
+====================================================
+
+Create an impressive new page:
+
+/crisis
+
+This must be the main demonstration screen for the
+surprise challenge.
+
+DESIGN:
+
+Use the existing premium dark navy LASTMILE AI design system.
+
+Create a dramatic but professional emergency dashboard.
+
+TOP HEADER:
+
+EXAM DAY EMERGENCY COMMAND CENTER
+
+Subtitle:
+
+"Coordinating scarce transport resources under
+time-critical conditions."
+
+Display:
+- CRISIS ACTIVE badge.
+- Simulation clock.
+- Time remaining until the earliest examination.
+- Restore normal operations button.
+
+TOP KPI CARDS:
+
+1. Total Crisis Demand.
+2. Available Seats.
+3. Examination Students.
+4. Students Reaching on Time.
+5. Students at Risk.
+6. Vehicles Operational.
+
+Every KPI must be dynamically calculated.
+
+EMERGENCY STATUS PANEL:
+
+Show four simultaneous emergency cards:
+
+BUS BREAKDOWN:
+2 vehicles unavailable.
+
+DEMAND SURGE:
+40% increase in demand.
+
+FLOOD ALERT:
+Nandihalli-Lakshmipura road closed.
+
+EXAMINATION ALERT:
+Multiple examination deadlines within 120 minutes.
+
+Each emergency card should display:
+- Severity.
+- Affected resources.
+- Status.
+- Recommended response.
+
+TRANSPORTATION MAP:
+
+Create a large interactive SVG network map.
+
+Display:
+- Four villages.
+- Educational institution.
+- Operational routes.
+- Available vehicles.
+- Broken-down vehicles.
+- Flooded road.
+- Alternative detour.
+
+Visual conventions:
+
+Operational road:
+Solid green or blue line.
+
+Flooded road:
+Red dashed line with closure icon.
+
+Alternative route:
+Amber or cyan dotted line.
+
+Available vehicle:
+Green vehicle marker.
+
+Broken vehicle:
+Red vehicle marker.
+
+Critical examination group:
+Red or amber priority marker.
+
+Clicking on a village should show:
+- Total demand.
+- Examination students.
+- Deadline.
+- Available transport.
+- Unmet demand.
+
+Clearly label the map as an illustrative simulation,
+not live geographical or GPS information.
+
+====================================================
+11. EXAM PRIORITY DISPATCH PANEL
+====================================================
+
+Create a panel titled:
+
+EXAM-FIRST DISPATCH PRIORITY
+
+Display all examination-bound village groups.
+
+Columns:
+
+- Village.
+- Examination students.
+- Exam starts in.
+- Estimated journey.
+- Arrival buffer.
+- Priority.
+- Assigned vehicle.
+- Arrival feasibility.
+
+Sort by deadline and actual estimated slack.
+
+Highlight critical groups.
+
+Show exactly why the group has been given its priority.
+
+Create a button:
+
+RECALCULATE EXAM PRIORITIES
+
+It should use the current simulation clock
+and actual route calculations.
+
+====================================================
+12. ALTERNATIVE ROUTE AND RECOVERY PANEL
+====================================================
+
+Build a separate panel:
+
+FLOOD RESPONSE & ROUTE RECOVERY
+
+Display:
+
+Original path:
+Nandihalli -> Lakshmipura.
+
+Status:
+BLOCKED BY FLOODING.
+
+Alternative:
+Nandihalli -> Harohalli -> Lakshmipura.
+
+Show:
+- Original estimated duration.
+- Alternative duration.
+- Additional journey time.
+- Vehicles affected.
+- Groups affected.
+- New arrival feasibility.
+
+Allow the administrator to compare:
+- Normal route.
+- Alternative route.
+
+The blocked route must remain unavailable until
+the administrator explicitly resets the scenario.
+
+====================================================
+13. LIVE EMERGENCY ACTIONS
+====================================================
+
+Create action buttons:
+
+1. ACTIVATE CRISIS.
+2. REOPTIMIZE TRANSPORT.
+3. APPLY EMERGENCY PLAN.
+4. VIEW UNALLOCATED STUDENTS.
+5. EXPORT EMERGENCY REPORT.
+6. RESET CRISIS.
+
+ACTIVATE CRISIS must:
+- Snapshot baseline data.
+- Mark two government buses unavailable.
+- Apply the 40% demand increase.
+- Close the selected road.
+- Activate examination priorities.
+- Start the simulation clock.
+- Run the optimizer.
+
+REOPTIMIZE TRANSPORT must:
+- Read the latest application state.
+- Recalculate current capacity.
+- Recompute shortest available routes.
+- Recalculate examination deadlines.
+- Produce a new plan.
+- Compare it with the previous plan.
+
+APPLY EMERGENCY PLAN must actually change the
+operational allocation.
+
+RESET CRISIS must restore the original baseline.
+
+All buttons must work.
+
+====================================================
+14. AI EMERGENCY RESPONSE INTELLIGENCE
+====================================================
+
+Create an impressive AI panel titled:
+
+AI EMERGENCY RESPONSE ADVISOR
+
+This panel must analyze the actual numerical
+optimizer result and produce an operational explanation.
+
+Integrate the existing Gemini API service if available.
+
+If Gemini is unavailable, use a deterministic local
+explanation generator.
+
+Never pretend an external AI model was called if it was not.
+
+THE AI MUST ANALYZE:
+
+1. Severity of the transport disruption.
+2. Remaining available seating capacity.
+3. Examination deadline pressure.
+4. Flood-related detours.
+5. Vehicle utilization.
+6. Most affected villages.
+7. Remaining unmet demand.
+8. Alternative approved transportation resources.
+
+RESPONSE FORMAT:
+
+EXECUTIVE SUMMARY
+
+Explain the current emergency in a few sentences.
+
+IMMEDIATE PRIORITIES
+
+Identify the student groups with the highest urgency.
+
+TRANSPORT ALLOCATION
+
+Explain the selected bus and van assignments.
+
+FLOOD RESPONSE
+
+Explain the alternative route and travel-time impact.
+
+EXAMINATION PROTECTION
+
+Explain which groups can reach the institution
+on time and which cannot.
+
+REMAINING RISKS
+
+Identify unresolved capacity and deadline problems.
+
+RECOMMENDED ACTIONS
+
+Suggest specific administrative next steps.
+
+The model must receive the optimizer's structured output.
+
+It must NOT calculate or invent the primary vehicle allocations.
+
+Numerical facts must always come from the deterministic
+optimization engine.
+
+====================================================
+15. CONTINGENCY TRANSPORT RESOURCES
+====================================================
+
+Create a panel:
+
+ADDITIONAL AUTHORIZED TRANSPORT OPTIONS
+
+This panel can show potential emergency resources such as:
+- Additional government buses.
+- School-authorized vans.
+- Institution-owned vehicles.
+- Verified authorized community transport.
+
+IMPORTANT:
+
+Do not automatically claim these resources are available.
+
+Represent each option with one of these statuses:
+
+CONFIRMED AVAILABLE.
+REQUIRES ADMIN CONFIRMATION.
+UNAVAILABLE.
+
+Allow an administrator to manually add and confirm
+an authorized resource before it enters the optimizer.
+
+Do not recommend unverified private rides for minors.
+
+Do not treat an unconfirmed vehicle as usable capacity.
+
+If there are not enough confirmed vehicles,
+show the real shortage and request administrative escalation.
+
+====================================================
+16. BEFORE-AND-AFTER CRISIS COMPARISON
+====================================================
+
+Build a strong visual comparison section.
+
+Title:
+
+FROM NORMAL OPERATIONS TO EXAM DAY CRISIS
+
+Compare:
+
+BASELINE:
+- 79 students.
+- 117 nominal seats.
+- Four operational vehicles.
+- No simulated flooding.
+
+CRISIS:
+- 111 students.
+- 47 nominal seats.
+- Two operational vehicles.
+- One flooded road.
+- Examination deadlines activated.
+
+Include:
+
+- Demand change.
+- Lost vehicle capacity.
+- Route disruption.
+- Examination priority.
+- Students served.
+- Students still at risk.
+
+The application must distinguish nominal seats
+from actual allocated seats and on-time arrivals.
+
+Show how the emergency plan improves on a naive
+allocation that ignores examination deadlines.
+
+====================================================
+17. INTERACTIVE WHAT-IF CONTROLS
+====================================================
+
+Allow the administrator to change:
+
+- Which two government buses break down.
+- Demand increase percentage.
+- Flooded road.
+- Examination start times.
+- Number of examination-bound students.
+- Vehicle capacity.
+- Route travel time.
+- Additional confirmed resources.
+
+Each modification must invalidate stale results
+and require or trigger recalculation.
+
+Display a visible warning:
+
+"TRANSPORT PLAN OUTDATED — REOPTIMIZE REQUIRED"
+
+Never show old allocations as if they reflect
+the newly modified scenario.
+
+====================================================
+18. REPORT EXPORT
+====================================================
+
+Create an exportable exam-day emergency report.
+
+Include:
+
+- Crisis identification.
+- Simulation timestamp.
+- Total student demand.
+- Available vehicles.
+- Unavailable vehicles.
+- Available seat capacity.
+- Flooded road.
+- Alternative route.
+- Examination-bound students.
+- On-time student count.
+- At-risk student count.
+- Vehicle assignments.
+- Vehicle utilization.
+- Unallocated demand.
+- AI recommendations.
+- Remaining operational limitations.
+
+Allow CSV download and print-to-PDF.
+
+====================================================
+19. DATA SAFETY
+====================================================
+
+Use aggregate student counts only.
+
+Do not create:
+- Student personal names.
+- Phone numbers.
+- Individual home addresses.
+- Individual GPS tracking.
+- Private student travel histories.
+
+Clearly identify all generated village and route
+data as illustrative demonstration data.
+
+====================================================
+20. REQUIRED TECHNICAL MODULES
+====================================================
+
+Extend the existing codebase.
+
+Suggested modules:
+
+lib/
+  crisis-engine.ts
+  crisis-optimizer.ts
+  exam-priority.ts
+  road-network.ts
+  shortest-path.ts
+  dispatch-scheduler.ts
+  emergency-ai.ts
+
+components/
+  crisis/
+    crisis-header.tsx
+    emergency-status.tsx
+    crisis-kpis.tsx
+    crisis-map.tsx
+    exam-priority-panel.tsx
+    dispatch-panel.tsx
+    route-recovery-panel.tsx
+    ai-emergency-advisor.tsx
+    vehicle-timeline.tsx
+    before-after.tsx
+    contingency-resources.tsx
+
+Adapt the structure to the existing architecture.
+
+Maintain strong TypeScript typing.
+
+Separate calculation logic from presentation.
+
+Avoid duplicate optimization implementations.
+
+====================================================
+21. AUTOMATED TESTING
+====================================================
+
+Create tests for the combined crisis.
+
+MANDATORY TESTS:
+
+TEST 1:
+Two government buses become unavailable.
+
+Verify that both are removed from usable capacity.
+
+TEST 2:
+Demand increases by 40%.
+
+Verify that aggregate demand becomes 111
+for the baseline demonstration dataset.
+
+TEST 3:
+Capacity calculation.
+
+Verify that the remaining BUS-03 and VAN-01
+provide 47 nominal seats.
+
+TEST 4:
+Flooded road.
+
+Verify that the Nandihalli-Lakshmipura edge
+cannot appear in any calculated route.
+
+TEST 5:
+Alternative path.
+
+Verify that the detour through Harohalli
+is available and calculates 27 minutes
+against the original 12-minute path.
+
+TEST 6:
+Examination priority.
+
+Verify that earlier examination deadlines
+receive appropriate priority.
+
+TEST 7:
+Arrival feasibility.
+
+Verify that students predicted to arrive
+after the required arrival deadline are marked
+at risk, not on time.
+
+TEST 8:
+Vehicle capacity.
+
+Verify that no assigned vehicle exceeds
+its permitted seating capacity.
+
+TEST 9:
+Vehicle uniqueness.
+
+Verify that a vehicle cannot be assigned
+to simultaneous trips.
+
+TEST 10:
+Demand accounting.
+
+Verify that each student in the aggregate demand
+is either allocated once or counted as unallocated.
+
+TEST 11:
+Resource confirmation.
+
+Verify that an unconfirmed contingency vehicle
+never increases usable capacity.
+
+TEST 12:
+Reset.
+
+Verify that all baseline values and initial
+vehicle statuses are restored correctly.
+
+TEST 13:
+Repeatability.
+
+The same crisis input must produce the same
+optimization output.
+
+TEST 14:
+Live edits.
+
+Verify that changing any critical scenario
+input invalidates previous optimization results.
+
+====================================================
+22. IMPLEMENTATION TIME: 100 MINUTES
+====================================================
+
+You have a strict 100-minute development window.
+
+Prioritize the following:
+
+PHASE 1 — FIRST 10 MINUTES
+
+Inspect the project.
+
+Understand all existing modules.
+
+Identify reusable components.
+
+Do not waste time rebuilding.
+
+PHASE 2 — 10 TO 30 MINUTES
+
+Implement:
+- Crisis scenario data.
+- Two bus breakdowns.
+- 40% demand increase.
+- Examination cohort model.
+- Flooded road state.
+- Restore normal state.
+
+PHASE 3 — 30 TO 55 MINUTES
+
+Implement:
+- Flood-aware shortest-path algorithm.
+- Examination priority calculation.
+- Emergency allocation engine.
+- Capacity validation.
+- Dispatch schedule.
+
+PHASE 4 — 55 TO 75 MINUTES
+
+Implement:
+- Crisis command center.
+- Emergency status cards.
+- Interactive route visualization.
+- Examination priority panel.
+- Alternative route comparison.
+- Live KPIs.
+
+PHASE 5 — 75 TO 90 MINUTES
+
+Implement:
+- AI emergency explanation.
+- Before-and-after comparison.
+- Scenario controls.
+- Report export.
+
+PHASE 6 — 90 TO 100 MINUTES
+
+Run all critical tests.
+
+Fix any blocking errors.
+
+Run a production build.
+
+Verify the application starts.
+
+Prepare the live demonstration.
+
+TIME MANAGEMENT RULE:
+
+If advanced functionality threatens the completion
+of the core emergency workflow, prioritize:
+
+1. Correct emergency state.
+2. Correct capacity.
+3. Valid alternative routes.
+4. Examination-first allocation.
+5. Accurate arrival feasibility.
+6. Working crisis dashboard.
+7. AI explanation.
+8. Additional visual polish.
+
+Do not spend excessive time on nonessential features.
+
+====================================================
+23. FINAL ACCEPTANCE CRITERIA
+====================================================
+
+The surprise challenge is complete only when:
+
+- Existing LASTMILE AI still works.
+- Crisis Mode can be activated.
+- Two government buses are unavailable.
+- Total demand is increased by 40%.
+- Available capacity is recalculated.
+- The flooded road is excluded.
+- Alternative routing works.
+- Examination-bound cohorts are prioritized.
+- Arrival feasibility is calculated.
+- Vehicle assignments obey capacity constraints.
+- No vehicle has overlapping assignments.
+- Unallocated students are reported accurately.
+- The AI advisor explains the actual optimizer output.
+- The scenario can be reset.
+- All primary controls work.
+- Critical automated tests pass.
+- The application builds successfully.
+
+====================================================
+24. FINAL EXECUTION COMMAND
+====================================================
+
+Start by inspecting the existing repository.
+
+Then produce a short implementation plan.
+
+Immediately implement the required changes.
+
+Do not stop after planning.
+
+Do not ask unnecessary questions.
+
+Do not generate only a visual mockup.
+
+Do not fake numerical results.
+
+Do not bypass the real optimization engine with
+hardcoded recommendations.
+
+Test every critical operation.
+
+Fix errors instead of merely documenting them.
+
+At completion, summarize:
+
+1. What was changed.
+2. How the crisis is activated.
+3. How the bus allocation works.
+4. How flooding is handled.
+5. How examination priorities work.
+6. Which automated tests passed.
+7. Any remaining limitations.
+
+YOUR MISSION:
+
+Make LASTMILE AI intelligently respond to THE EXAM DAY CRISIS.
+
+Two buses are down.
+Demand has increased by 40%.
+A major road is flooded.
+Examinations are approaching.
+
+Every available seat matters.
+
+Every minute matters.
+
+BUILD THE WORKING SOLUTION NOW.
+
+
+/goal
+
+Act as a senior full-stack developer and QA engineer.
+
+Perform a complete debugging and optimization audit of my existing LASTMILE AI application.
+
+1. Inspect the entire codebase and identify bugs, incomplete features, broken buttons, incorrect calculations, and UI issues.
+2. Fix all critical errors without rebuilding or removing existing functionality.
+3. Test the Exam Day Crisis workflow:
+   - Two government buses unavailable.
+   - Student demand increases by 40%.
+   - Flooded road blocked.
+   - Alternative routes calculated.
+   - Examination students prioritized.
+   - Vehicle capacity and arrival deadlines respected.
+4. Verify the optimizer, AI/Gemini integration, fallback mode, state management, and LocalStorage.
+5. Ensure every button, form, chart, navigation link, and simulation works.
+6. Fix responsive design issues and improve UI polish.
+7. Run TypeScript checks, tests, lint, and production build.
+8. Fix errors and rerun failed tests.
+
+IMPORTANT:
+- Do not create a new project.
+- Do not use fake data or hardcoded dynamic results.
+- Never exceed vehicle capacity.
+- Never allocate unavailable vehicles.
+- Never use flooded roads.
+- Never claim students will arrive on time without valid calculations.
+- Preserve all existing working features.
+
+Work autonomously. Do not stop after identifying bugs; fix them and verify the results.
+
+Finally, provide a report of bugs fixed, tests passed, build status, and remaining issues.
+
+MAKE THE APPLICATION FULLY FUNCTIONAL, STABLE, AND HACKATHON-READY.
+
+
+TASK: COMPLETE UI/UX REDESIGN OF LASTMILE AI
+
+Act as a senior product designer and frontend architect
+who has designed production-grade platforms like RedBus,
+Uber, Google Maps and enterprise fleet management systems.
+
+Redesign the existing LASTMILE AI interface to look like
+a professionally developed transportation platform,
+not an AI-generated SaaS dashboard.
+
+DESIGN DIRECTION:
+Take inspiration from RedBus's professional visual
+language, particularly its clean layouts, strong
+information hierarchy, functional navigation and
+consistent use of color.
+
+IMPORTANT: Do not copy RedBus branding or layout.
+Create an original LASTMILE AI identity.
+
+1. COLOR SYSTEM
+- Primary: Professional transportation red (#D32F2F).
+- Background: White (#FFFFFF).
+- Secondary background: Light grey (#F5F6F8).
+- Primary text: Dark charcoal (#252525).
+- Secondary text: Muted grey.
+- Success: Professional green.
+- Warning: Amber.
+- Critical emergency: Red.
+
+Remove unnecessary gradients, neon colors and glowing
+effects. Use color only to communicate information.
+
+2. DASHBOARD LAYOUT
+Create a clean, structured transportation dashboard.
+
+LEFT SIDEBAR:
+- LASTMILE AI logo.
+- Overview.
+- Live Operations.
+- Route Optimizer.
+- Demand Forecast.
+- AI Intelligence.
+- Scenario Simulator.
+- Exam Day Crisis.
+- Transport Resources.
+- Settings.
+
+Use simple consistent line icons.
+Keep navigation compact and professional.
+
+TOP NAVIGATION:
+- Current operating location.
+- Demonstration/live data indicator.
+- Notifications.
+- User profile.
+- Export controls.
+
+3. MAIN DASHBOARD
+
+Replace the oversized hero section with a compact
+operational welcome section.
+
+Title:
+Rural Mobility Dashboard
+
+Subtitle:
+Monitor routes, vehicle availability and student
+transportation across rural corridors.
+
+Provide two primary actions:
+- Optimize Transport.
+- Exam Day Crisis.
+
+4. KPI SECTION
+
+Display four or five compact metric cards:
+- Registered Demand.
+- Available Seats.
+- Active Vehicles.
+- Students Served.
+- Unallocated Demand.
+
+Use large readable numbers, small labels and subtle
+icons. Avoid excessive card decorations.
+
+5. TRANSPORT NETWORK VISUALIZATION
+
+Make the transportation network map a major component.
+
+Display villages, educational institutions, operational
+routes, vehicle positions and road disruptions.
+
+Use a clean map-like visual rather than decorative
+illustrations.
+
+6. EXAM DAY CRISIS MODE
+
+This is a critical feature.
+
+Give it a distinct emergency interface while maintaining
+the same overall design system.
+
+Use:
+- White/light-grey dashboard background.
+- Red emergency header.
+- Clearly visible CRISIS ACTIVE status.
+- Compact emergency KPI cards.
+- Professional route visualization.
+- Examination priority table.
+- Vehicle dispatch schedule.
+- Flood recovery information.
+- AI emergency response panel.
+
+Make emergency information immediately understandable.
+
+7. TABLES AND DATA
+
+Use professional data tables instead of unnecessarily
+decorated cards wherever appropriate.
+
+Ensure:
+- Consistent column alignment.
+- Readable typography.
+- Clear status indicators.
+- Proper spacing.
+- Useful sorting and filtering.
+- Responsive layouts.
+
+8. TYPOGRAPHY
+
+Use Inter or a similar professional sans-serif font.
+
+Establish consistent typography:
+- Page headings: 24–28px.
+- Section headings: 16–18px.
+- Body text: 13–15px.
+- KPI values: 26–32px.
+
+Avoid oversized marketing-style typography.
+
+9. DESIGN RULES
+
+STRICTLY AVOID:
+- Excessive rounded containers.
+- Glassmorphism.
+- Neon gradients.
+- Glowing buttons.
+- Random decorative elements.
+- Emoji-based icons.
+- Oversized hero banners.
+- Excessive shadows.
+- Generic AI-generated dashboard aesthetics.
+
+Prefer:
+- Consistent spacing.
+- Subtle borders.
+- Minimal shadows.
+- Clean alignment.
+- Professional icons.
+- Compact information density.
+- Clear visual hierarchy.
+- Functional interactions.
+
+10. IMPLEMENTATION REQUIREMENTS
+
+IMPORTANT:
+- Inspect the existing application before modifying it.
+- Preserve all existing functionality.
+- Do not rewrite the optimization engine.
+- Do not change backend logic or calculation results.
+- Preserve all crisis functionality.
+- Reuse existing components where practical.
+- Maintain responsive desktop and mobile layouts.
+- Ensure every button and navigation item works.
+- Do not replace functional components with static mockups.
+
+Redesign the entire application consistently,
+including Overview, Live Operations, Route Optimizer
+and Exam Day Crisis.
+
+FINAL EXPECTATION:
+
+LASTMILE AI should look like a legitimate transportation
+technology company product, comparable in visual
+professionalism to established platforms like RedBus.
+
+It must look human-designed, production-ready,
+trustworthy and operationally useful.
+
+Prioritize usability over decoration.
+
